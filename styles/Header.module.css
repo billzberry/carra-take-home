@@ -4,7 +4,7 @@
     width: 100%;
     height: 40px;
     background-color: transparent;
-    padding: 0 10%;
+    padding: 0 8%;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -16,6 +16,10 @@
     align-self: center;
     text-align: center;
     text-align-last: center;
+}
+
+.header div.favorite span {
+    cursor: pointer;
 }
 
 .header div.badge {

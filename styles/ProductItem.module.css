@@ -1,0 +1,37 @@
+.img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2% 2% 0;
+}
+
+.card div.productImg {
+    width: 80%;
+    margin: 8% auto 0;
+}
+
+.card div.favoriteIcon {
+    text-align: right;
+    margin: -10 0 0;
+}
+
+.card div.favoriteIcon span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card div.productLabelDescription {
+    width: 100%;
+    background-color: transparent;
+}
+
+div.productLabelDescription span.productLabel {
+    display: block;
+}
+
+div.productLabelDescription span.productPrice {
+    display: block;
+}
