@@ -9,26 +9,39 @@ export type LayoutProp = {
 
 export type LayoutComponent = React.FC<LayoutProp>
 
-export type ProductItemProp = {
-    img:string
-    label:string
+export type ProductDetails = {
+    createdAt:string
+    name:string
+    image:string
     price:string|number
+    offers:any[]
     discontinued:boolean
-    favorite:boolean
+    id:string|number
+    favorite?:boolean
+}
+
+export type ProductItemProp = {
+    product:ProductDetails
+    onSetFavorite:any
 }
 
 export type ProductItemComponent = React.FC<ProductItemProp>
 
 export type ProductListProp = {
-    products: {
-        createdAt:string
-        name:string
-        image:string
-        price:string|number
-        offers:any[]
-        discontinued:boolean
-        id:string|number
-    }[]
+    products: ProductDetails[]
+    onSetProductFavorite:any
 }
 
 export type ProductListComponent = React.FC<ProductListProp>
+
+export type Favorite = {
+    name:string
+    id:string
+}
+
+export type HeaderProp = {
+    favorites:Favorite[]
+    onRemoveFavorite:any
+}
+
+export type HeaderComponent = React.FC<HeaderProp>
