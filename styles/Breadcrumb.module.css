@@ -13,3 +13,15 @@
     justify-self: center;
     align-self: center;
 }
+
+
+/* For mobile phones */
+@media only screen and (max-width: 768px) {
+    .breadcrumb {
+        height: 70px;
+    }
+
+    .breadcrumb h2 {
+        font-size: medium;
+    }
+}

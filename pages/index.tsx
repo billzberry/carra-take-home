@@ -46,7 +46,7 @@ const Home:NextPage = ( { products }:any ) => {
 
 export const getStaticProps:GetStaticProps = async () => {
 	const result = await fetch('https://62153783cdb9d09717b21f66.mockapi.io/api/v1/catalogue')
-	const products:ProductListProp = await result.json()
+	const products:any = await result.json()
 
 	return {
 		props: {
