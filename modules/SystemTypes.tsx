@@ -6,3 +6,5 @@ import * as React from 'react'
 export type LayoutProp = {
     children: any
 }
+
+export type LayoutComponent = React.FC<LayoutProp>

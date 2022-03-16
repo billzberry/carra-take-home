@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { LayoutProp } from "../modules/SystemTypes"
+import { LayoutComponent } from "../modules/SystemTypes"
 
 
 /**
@@ -7,7 +6,7 @@ import { LayoutProp } from "../modules/SystemTypes"
  * @param param0 - children -> This param accept any component or element passed as props
  * @returns - JSX
  */
-const Layouts: React.FC<LayoutProp> = ( { children } ) => {
+const Layouts: LayoutComponent = ( { children } ) => {
     return (
         <>
             {children}
