@@ -2,8 +2,9 @@ import type { GetStaticProps, NextPage } from 'next'
 import { useState } from 'react'
 import Breadcrumb from '../components/Breadcrumb'
 import Header from '../components/Header'
+import Meta from '../components/Meta'
 import ProductList from '../components/ProductList'
-import { Favorite, ProductDetails, ProductListProp } from '../modules/SystemTypes'
+import { Favorite, ProductDetails } from '../modules/SystemTypes'
 
 
 /**
@@ -70,9 +71,39 @@ const Home:NextPage = ( { products }:any ) => {
 		//Update the favorite field of a particular product details
 		setProductList(productList.map((product:ProductDetails) => product.id === id ? { ...product, favorite: !product.favorite } : product))
 	}
+
+	/**
+	 * getMetaDetails - this methods collects all product names as keywords
+	 * @returns - { title, keywords, description }
+	 */
+	const getMetaDetails = () => {
+		//Initialize a keyword string
+		let keywords = ''
+		//Check if productList is an array and has data
+		if (Array.isArray(productList) && productList.length > 0) {
+			for (let i = 0; i < productList.length; i++) {
+				//Get single product details of ProductDetails type
+				const item:ProductDetails = productList[i]
+				//This checks to make sure the first item doesn't include a comma (,)
+				if (i === 0) {
+					keywords = item.name
+				} else {
+					//Add comma to the next item name
+					keywords += `, ${item.name}`
+				}
+			}
+		}
+
+		return {
+			title: 'Carra Take Home Assignment',
+			keywords: keywords,
+			description: `We're creating a joy-filled future for textured hair. We believe that all it takes is the right tools and knowledge. Product recommendations tailored to your needs. Unbiased, expert advice whatever your style and support when you need it. Start the journey and fall in love with your hair!`
+		}
+	}
 	
 	return (
 		<>
+			<Meta metaDetails={getMetaDetails()} />
 			<Header favorites={favorites} onRemoveFavorite={removeFavorite} />
 			<Breadcrumb />
 			<ProductList products={productList} onSetProductFavorite={setProductAsFavorite} />

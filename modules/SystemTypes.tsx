@@ -45,3 +45,13 @@ export type HeaderProp = {
 }
 
 export type HeaderComponent = React.FC<HeaderProp>
+
+export type MetaProp = {
+    metaDetails: {
+        title:string
+        keywords:string
+        description:string
+    }
+}
+
+export type MetaComponent = React.FC<MetaProp>
