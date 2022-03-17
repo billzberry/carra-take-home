@@ -5,7 +5,7 @@ import ProductItem from './ProductItem'
 const ProductList:ProductListComponent = ( { products, onSetProductFavorite } ) => {
     return (
         <>
-            <div className={styles.row}>
+            <div className={styles.row} data-testid="product-list">
                 {products.map((product) => (
                     <div className={styles.col} key={product.id}>
                         <ProductItem product={product} onSetFavorite={onSetProductFavorite} />
