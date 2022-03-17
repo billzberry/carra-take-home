@@ -4,7 +4,7 @@ import styles from '../styles/ProductItem.module.css'
 
 const ProductItem:ProductItemComponent = ( { product, onSetFavorite } ) => {
     return (
-        <>
+        <div className={styles.cardMain} data-testid={`product-item-${product.id}`}>
             <div className={styles.card}>
                 <div className={styles.productImg}>
                     <img className={styles.img} src={product.image} alt="product image" />
@@ -18,7 +18,7 @@ const ProductItem:ProductItemComponent = ( { product, onSetFavorite } ) => {
                 <span className={styles.productLabel}> {product.name} </span>
                 <span className={styles.productPrice}> {Number(product.price).toFixed(2)}$</span>
             </div>
-        </>
+        </div>
     )
 }
 

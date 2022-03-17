@@ -3,6 +3,10 @@
     max-height: 100%;
 }
 
+.cardMain {
+    width: 100%;
+}
+
 .card {
     position: relative;
     background-color: #ffffff;

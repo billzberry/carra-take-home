@@ -12,7 +12,7 @@ const Header:HeaderComponent = ( { favorites, onRemoveFavorite } ) => {
 
     return (
         <>
-            <div className={styles.header}>
+            <div className={styles.header} data-testid={`header-component`}>
                 <div className={styles.favorite}>
                     <span className="material-icons" onClick={showDropdown}> favorite </span>
                     <div className={styles.badge}>{favorites.length}</div>

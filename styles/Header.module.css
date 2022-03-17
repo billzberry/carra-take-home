@@ -17,6 +17,7 @@
     text-align: center;
     text-align-last: center;
     width: 10%;
+    margin-right: 10.5%;
 }
 
 .header div.favorite span {
@@ -100,6 +101,7 @@
 
     .header div.favorite {
         width: 20%;
+        margin-right: 0;
     }
 
     .header div.badge {
