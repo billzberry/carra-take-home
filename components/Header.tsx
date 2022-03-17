@@ -2,11 +2,20 @@ import { useState } from 'react'
 import { HeaderComponent, HeaderProp } from '../modules/SystemTypes'
 import styles from '../styles/Header.module.css'
 
-
+/**
+ * Header component handles the shortlist event and drawer
+ * @param param0 - { favorites, onRemoveFavorite } -> props needed for the Header component to work properly
+ * @returns - JSX
+ */
 const Header:HeaderComponent = ( { favorites, onRemoveFavorite } ) => {
+    //dropdownChecker is initially set to false - making the drawer hidden
     const [dropdownChecker, setDropdownChecker] = useState(false)
 
+    /**
+     * showDropdown (Header Component) - this method handles how the drawer opens and closes
+     */
     const showDropdown = () => {
+        //Set the dropdownChecker to opposite the initial dropdownChecker value (if false, will be set to true)
         setDropdownChecker(!dropdownChecker)
     }
 

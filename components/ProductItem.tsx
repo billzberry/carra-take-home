@@ -2,6 +2,12 @@
 import { ProductItemComponent } from '../modules/SystemTypes'
 import styles from '../styles/ProductItem.module.css'
 
+
+/**
+ * ProductItem component handles or returns a single catalog item
+ * @param param0 - { product, onSetFavorite } -> the props needed for the component to work properly
+ * @returns - JSX
+ */
 const ProductItem:ProductItemComponent = ( { product, onSetFavorite } ) => {
     return (
         <div className={styles.cardMain} data-testid={`product-item-${product.id}`}>

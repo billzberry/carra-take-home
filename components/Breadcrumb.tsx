@@ -1,6 +1,9 @@
 import styles from '../styles/Breadcrumb.module.css'
 
-
+/**
+ * Breadcrumb component display the heading or title of a page
+ * @returns - JSX
+ */
 const Breadcrumb = () => {
     return (
         <>
